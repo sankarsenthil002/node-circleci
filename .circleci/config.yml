@@ -1,0 +1,14 @@
+version: 2.1
+
+
+version: '2.1'
+orbs:
+ docker: circleci/docker@2.2.0
+
+
+workflows:
+  run-npm-command:
+    jobs:
+      - node/run:
+          npm-run: build
+
